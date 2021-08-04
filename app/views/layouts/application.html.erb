@@ -11,6 +11,26 @@
   </head>
 
   <body>
+
+  <header class="header">
+    <nav class="nav">
+      <ul class="header_menu">
+        <li class="header_menu_title"><%= link_to "(title)", root_path, class:"nav-link" %></li>
+        <li>
+          <ul class="header_menu_inner">
+            <li>
+              <%= link_to "#", class:"nav-link" do %>
+                <span class="mr-1">ゲストログイン</span>
+                <i class="fas fa-edit"></i>
+              <% end %>
+            </li>
+            <li><%= link_to "新規登録", "#", class: "nav_link" %></li>
+            <li><%= link_to "ログイン", "#", class: "nav_link" %></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
     <%= yield %>
   </body>
 </html>
