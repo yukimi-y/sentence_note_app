@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-dark fixed-top" style="background-color: #6699FF;">
   <div class="container">
-    <a class="navbar-brand" href="#">sentence note (仮)</a>
+    <%= link_to "sentence note(仮)", root_path, class: 'navbar-brand' %>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,15 +9,17 @@
       <div class="navbar-nav">
         <% if user_signed_in? %>
           <li class="nav-item">
-            <a class="nav-link" href="#">ノート作成</a>
+            <%= link_to 'マイページ' , edit_user_registration_path, class: 'nav-link'%> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">一覧</a>
+            <%= link_to '一覧' , '#', class: 'nav-link'%> 
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">ログアウト</a>
+            <%= link_to 'ノート作成' , '#', class: 'nav-link'%> 
           </li>
-          <%#= link_to "ログアウト", destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } %>
+          <li class="nav-item">
+            <%= link_to 'ログアウト' , destroy_user_session_path, method: :delete, data: { confirm: "ログアウトしますか？" } , class: 'nav-link'%> 
+          </li>
         <% else %>
           <li class="nav-item">
             <%= link_to "新規登録", new_user_registration_path, class: 'nav-link' %>
