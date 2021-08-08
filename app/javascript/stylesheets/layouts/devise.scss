@@ -1,13 +1,52 @@
-.main {
+.title {
+  text-align: center;
+  margin: 20px 0px 0px;
+}
+
+main {
+  padding-bottom: 60px;
+}
+
+.form-group {
   max-width: 900px;
   margin: 0 auto;
   width: 90%;
-  padding: 100px 80px 100px;
-  display: block;
+  padding: 10px 80px 10px;
+  display: fixed;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   box-sizing: border-box;
 }
 
-.devise-card {
-  border: none;
+// ボタン
+.btn {
+  font-size: 1rem;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 20px;
+  width: 30%;
+  min-width: 60px;
+  max-width: 350px;
+}
+
+.row-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.btn--darkblue.btn--border-groove {
+  border: 6px groove #03b5cc;
+  color: #023941;
+  background-color: #d0f5fa;
+}
+
+.btn--rightblue.btn--border-groove {
+  border: 6px groove #c3f2f8;
+  color: #4f7479;
 }
