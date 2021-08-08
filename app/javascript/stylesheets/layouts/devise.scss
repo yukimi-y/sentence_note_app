@@ -3,19 +3,21 @@
   padding: 40px 0px 30px;
 }
 
+main {
+  padding-bottom: 60px;
+}
+
 .form-group {
   max-width: 900px;
   margin: 0 auto;
   width: 90%;
   padding: 10px 80px 10px;
-  display: flex;
+  display: fixed;
   justify-content: center;
   align-items: center;
   flex: 1;
   box-sizing: border-box;
 }
-
-
 
 // ボタン
 .btn {
@@ -24,21 +26,27 @@
   position: relative;
   display: inline-block;
   text-align: center;
-  padding: 10px 40px;
+  padding: 10px 10px;
   cursor: pointer;
   border-radius: 10px;
   margin: 20px;
+  width: 30%;
+  min-width: 60px;
+  max-width: 350px;
+}
+
+.row-buttons {
+  display: flex;
+  justify-content: center;
 }
 
 .btn--darkblue.btn--border-groove {
   border: 6px groove #03b5cc;
   color: #023941;
   background-color: #d0f5fa;
-  width: 280px;
 }
 
 .btn--rightblue.btn--border-groove {
   border: 6px groove #c3f2f8;
   color: #4f7479;
-  width: 280px;
 }
