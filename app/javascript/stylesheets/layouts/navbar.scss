@@ -1,0 +1,38 @@
+.mw-xl {
+  max-width: 1000px;
+}
+
+body {
+  padding-top: 56px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link-disabled {
+  color: rgb(85, 73, 73);
+}
+
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, .0975);
+  height: 60px;
+
+  &-brand {
+  position: absolute;
+  font-size: 25px;
+  }
+
+  &-nav {
+    display: inline-block;
+    padding: 0;
+    margin-left: auto
+  }
+}
+
+.nav-item {
+      display: inline-block;
+      padding: 0;
+      margin-left: auto
+}
