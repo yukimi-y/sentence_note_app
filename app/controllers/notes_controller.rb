@@ -14,7 +14,11 @@ class NotesController < ApplicationController
 
   def create
     note = Note.create!(note_params)
-    redirect_to note
+    if @note.save
+      redirect_to note_path
+    else
+      redirect_to new_note_path
+    end
   end
 
   def edit
@@ -37,6 +41,6 @@ class NotesController < ApplicationController
   end
 
   def note_params
-    params.require(:note).permit(:title)
+    params.require(:note).permit(:title, :image).merge(user: current_user)
   end
 end
