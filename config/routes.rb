@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'notes#index'
   devise_for :users
 
-  get '/users/:id', to: 'users#show', as: 'user'
+  resources :notes
 end

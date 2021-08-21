@@ -35,4 +35,5 @@
 yarn-debug.log*
 .yarn-integrity
 .DS_Store
-/vemdor/bundle
+/vendor/bundle
+public/uploads/
