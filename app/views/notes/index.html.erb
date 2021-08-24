@@ -5,6 +5,11 @@
         <div class="note">
           <div class="note_header">
             <h2 class="note_header_title"><%= note.title %></h2>
+            <div class="note_edit">
+              <%= link_to edit_note_path(note), class: "item-edit" do %>
+              <i class="fas fa-edit" title="編集"></i>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>

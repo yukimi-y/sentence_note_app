@@ -27,8 +27,11 @@ class NotesController < ApplicationController
   end
 
   def update
-    @note.update!(note_params)
-    redirect_to @note
+    if @note.update_attributes(note_params)
+      redirect_to root_path
+    else
+      redirect_to edit_path
+    end
   end
 
   def destroy
