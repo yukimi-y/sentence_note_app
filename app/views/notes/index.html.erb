@@ -1,1 +1,12 @@
-<h1>ノート一覧</h1>
+<h4 class="title">ノート一覧<h4>
+  <div class="topPage">
+    <div class="listWrapper">
+      <% @notes.each do |note| %>
+        <div class="note">
+          <div class="note_header">
+            <h2 class="note_header_title"><%= note.title %></h2>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>

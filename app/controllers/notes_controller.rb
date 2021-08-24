@@ -2,7 +2,7 @@ class NotesController < ApplicationController
   before_action :set_note, only: %i[show edit update destroy]
 
   def index
-    @notes = Note.includes(:notes, :users).order(id: :asc)
+    @notes = Note.order(id: :asc)
   end
 
   def show
