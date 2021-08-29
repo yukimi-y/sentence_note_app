@@ -1,5 +1,5 @@
 <%= form_with model: @note, local: true do |form| %>
   <p><%= form.text_field :title, placeholder: "タイトル" %></p>
-  <p><%= form.file_field :image %></p>
-  <p><%= form.submit "送信" %></p>
+  <p><%= form.file_field :image, accept: "image/png,image/jpeg,image/gif" %></p>
+  <p><%= form.submit "保存" %></p>
 <% end %>

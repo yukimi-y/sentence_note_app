@@ -1,20 +1,23 @@
-<h4 class="title">ノート一覧<h4>
-  <div class="topPage">
-    <div class="listWrapper">
+<div class="container">
+  <h4 class="title">ノート一覧<h4>
+  <div class="row">
       <% @notes.each do |note| %>
-        <div class="note">
-          <div class="note_header">
-            <h2 class="note_header_title"><%= note.title %></h2>
-            <div class="note_edit">
-              <%= link_to edit_note_path(note), class: "item-edit" do %>
-                <i class="fas fa-edit" title="編集"></i>
-              <% end %>
-              <%= link_to note_path(note),method: :delete, data: { confirm: "削除しますか？"}, class: "item-delete" do %>
-                <i class="fas fa-trash"></i>
-              <% end %>
-            </div>
+        <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <a href="#"><%= image_tag note.image.url %>
+          <p class="note_title"><%= note.title %></p>
+          </a>
+          <div class="note_edit">
+            <%= link_to edit_note_path(note), class: "item-edit" do %>
+              <i class="fas fa-edit" title="編集"></i>
+            <% end %>
+            <%= link_to note_path(note),method: :delete, data: { confirm: "削除しますか？"}, class: "item-delete" do %>
+              <i class="fas fa-trash"></i>
+            <% end %>
           </div>
+        </div>
         </div>
       <% end %>
     </div>
   </div>
+</div>
