@@ -4,8 +4,9 @@
       <% @notes.each do |note| %>
         <div class="col-12 col-md-6 col-lg-4">
         <div class="card">
-          <%= image_tag note.image.url %>
+          <a href="#"><%= image_tag note.image.url %>
           <p class="note_title"><%= note.title %></p>
+          </a>
           <div class="note_edit">
             <%= link_to edit_note_path(note), class: "item-edit" do %>
               <i class="fas fa-edit" title="編集"></i>
